@@ -1,7 +1,22 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/node-apis/
- */
 
-// You can delete this file if you're not using it
+exports.createPages = async ({ actions }) => {
+  const { createPage } = actions;
+
+  const foo = [
+    "dynamic-page-1", 
+    "dynamic-page-2", 
+    "dynamic-page-3",
+  ];
+
+  foo.map(titlePage => {
+
+    createPage({
+      path: `/subpath/${titlePage}`,
+      component: require.resolve('./src/templates/example.jsx'),
+      context: {
+        titlePage,
+      },
+    });
+  })
+
+};
