@@ -1,8 +1,14 @@
-import React from "react"
+import React from "react";
+
+import ExampleSection from "../components/sections/ExampleSection";
 
 function NotFoundPage() {
-  return <div>404</div>
-}
+  return (
+    <div>
+      <ExampleSection title="404" />
+    </div>
+  );
+};
 
 NotFoundPage.propTypes = {};
 

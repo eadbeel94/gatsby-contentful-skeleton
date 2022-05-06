@@ -1,10 +1,16 @@
 import React from "react";
 import PropTypes from 'prop-types';
 
+import ExampleSection from "../components/sections/ExampleSection";
+
 function Example({ pageContext }) {
   const { titlePage } = pageContext;
 
-  return <div>{titlePage}</div>
+  return (
+    <div>
+      <ExampleSection title={titlePage} />
+    </div>
+  );
 };
 
 Example.propTypes = {

@@ -1,8 +1,14 @@
-import React from "react"
+import React from "react";
+
+import ExampleSection from "../components/sections/ExampleSection";
 
 function Home() {
-  return <div>Hello world</div>
-}
+  return (
+    <div >
+      <ExampleSection title="Home Page" />
+    </div>
+  );
+};
 
 Home.propTypes = {};
 
